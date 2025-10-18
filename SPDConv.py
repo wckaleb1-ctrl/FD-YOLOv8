@@ -1,0 +1,17 @@
+class SPDConv_Trans(nn.Module):
+    def __init__(self, inc, ouc):
+        super().__init__()
+        self.inc = inc
+        self.ouc = ouc
+        # self.cv=Conv(c1=self.ouc,c2=self.inc,k=1,s=1)
+
+    def forward(self, x):
+        B, C, H, W = x.shape
+        print(f'inc{self.inc}')
+        print(f'ouc{self.ouc}')
+        print(f'x_shape:{x.shape}')
+        x = x.view(B, 4, self.ouc, H, W)
+        x = x[:, [0, 2, 1, 3], :, :, :]
+        x = x.reshape(B, 4 * self.ouc, H, W)
+        x = torch.nn.functional.pixel_shuffle(x, 2)
+        return x
