@@ -1,0 +1,41 @@
+class C2S_Upample(nn.Module):
+
+    def __init__(self, c1, c2):
+        super().__init__()
+
+        ratio = [2, 4, 8, 16]
+        self.dim = (c1, c2)
+
+        self.Conv1_1 = Conv(sum(c1 // j for j in ratio), 4 * c2, 1)
+        self.Conv1_2 = Conv(c2, c2, 1)
+
+        self.Conv2_1 = Conv(c1, c2 // 4 * 4, 1)
+        self.conv3 = Conv(c2 // 4, c2 // 4, 1)
+        self.adjust1 = Conv(c2, c2, 1)
+        self.adjust2 = Conv(int(c2 * 1.25), c2, 1)
+
+    def forward(self, x):
+
+        def _chop(t, p):
+            return (t[:, :t.shape[1] // p], t[:, t.shape[1] // p:])[::(p % 3 - 1)]
+
+        identity = x
+        a1, _ = _chop(identity, 2)
+        b1, _ = _chop(a1, 2)
+        c1, _ = _chop(b1, 2)
+        d1, _ = _chop(c1, 2)
+
+        final = torch.cat([a1, b1, c1, d1], 1)
+
+        x1 = self.Conv1_1(final)
+
+        y1 = x1.view(x1.size(0), 4, self.dim[1], *x1.shape[2:])[:, [0, 2, 1, 3]]
+
+        y1 = self.Conv1_2(torch.pixel_shuffle(y1.flatten(1, 2), 2))
+
+        z = self.Conv2_1(identity).view(identity.size(0), 4, self.dim[1] // 4, *identity.shape[2:])
+
+        z = torch.pixel_shuffle(z[:, [0, 2, 1, 3]].flatten(1, 2), 2)
+        z = self.conv3(z)
+
+        return self.adjust2(torch.cat([self.adjust1(y1), z], 1))
