@@ -91,7 +91,8 @@ NVIDIA Tesla T4 GPU
 
 # Install dependencies
 pip install -r requirements.txt
-📦 Dataset & Code Access
+
+## 📦 Dataset & Code Access
 
 The repository includes core implementation code and dataset references for FD-YOLOv8.
 The dataset and code can be accessed via Baidu Cloud:
