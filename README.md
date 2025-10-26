@@ -3,9 +3,7 @@
 
 FD-YOLOv8 is an improved YOLOv8-based detection framework designed for **robust and precise detection of floating objects on water surfaces**.  
 The model enhances YOLOv8n through three key structural modules — **SPDConv**, **CSP_DCNv2CoordConv**, and **C2S_Upsample** — to address challenges such as small-object loss, reflection interference, and multi-scale feature degradation.
-
-##🔍 Model Overview
-
+## 🔍 Model Overview
 To address the challenges of small-object detection, visual similarity, and complex water-surface disturbances, our model introduces three key structural improvements based on YOLOv8n — forming the FD-YOLOv8 architecture:
 
 SPDConv Module (Sparse and Dynamic Convolution)
@@ -22,6 +20,8 @@ By reorganizing multi-level features and preserving high-frequency information, 
 
 Together, these three modules enable FD-YOLOv8 to achieve superior precision, recall, and mAP performance compared to standard YOLOv8n, with improved robustness in small-object detection, reflection suppression, and class discrimination across diverse water environments.
 ---
+<img width="691" height="521" alt="image" src="https://github.com/user-attachments/assets/e2901410-a7d0-4216-b40e-f90123bbaa71" />
+
 
 ## 🔍 Overview
 
