@@ -48,6 +48,8 @@ The dataset used in this study includes **12,000 labeled images** of eight major
 - Split ratio: **Train 70% / Val 20% / Test 10%**
 
 ---
+<img width="243" height="172" alt="image" src="https://github.com/user-attachments/assets/c31fe7a4-17e0-43d8-8c33-bde4dc278302" />
+
 
 ## ⚙️ Environment Setup
 
