@@ -33,43 +33,26 @@ By reorganizing multi-level features and preserving high-frequency information, 
 
 ---
 
-## 🌍 Overview
-
-Floating debris such as plastic, glass, and metal severely threaten aquatic ecosystems and urban water management.  
-FD-YOLOv8 improves detection accuracy and robustness in dynamic water environments by introducing:
-
-- **SPDConv**: Enhances contextual feature extraction and discrimination between visually similar debris (e.g., plastic vs. glass).  
-- **CSP_DCNv2CoordConv**: Strengthens spatial localization and adapts to illumination, glare, and deformation.  
-- **C2S_Upsample**: Refines upsampling for better small-object perception and high-frequency detail preservation.
-
----
-
 ## 🧩 Model Architecture
 
-The overall architecture of **FD-YOLOv8** and its improved components are illustrated below.
+The main components of **FD-YOLOv8** are illustrated below.
 
 <div align="center">
-  <img width="850" alt="FD-YOLOv8 Architecture" src="https://github.com/user-attachments/assets/35121819-52ad-428a-bde3-0c688ab2abad" />
+  <img width="520" alt="SPDConv Module" src="https://github.com/user-attachments/assets/eb763163-9618-4ec0-9206-19658da9862c" />
   <br>
-  <em>Figure 2. The overall structure of FD-YOLOv8 model.</em>
+  <em>Figure 2. SPDConv module — multi-branch sparse convolution and dynamic fusion.</em>
 </div>
 
 <div align="center">
-  <img width="500" alt="SPDConv Module" src="https://github.com/user-attachments/assets/eb763163-9618-4ec0-9206-19658da9862c" />
+  <img width="540" alt="CSP_DCNv2CoordConv Module" src="https://github.com/user-attachments/assets/50c4aa0e-2908-4877-ab86-5ef356d2aa11" />
   <br>
-  <em>Figure 3. SPDConv module structure — multi-branch sparse convolution and dynamic fusion.</em>
+  <em>Figure 3. CSP_DCNv2CoordConv module — combining deformable convolution and coordinate convolution for enhanced spatial awareness.</em>
 </div>
 
 <div align="center">
-  <img width="520" alt="CSP_DCNv2CoordConv Module" src="https://github.com/user-attachments/assets/50c4aa0e-2908-4877-ab86-5ef356d2aa11" />
+  <img width="580" alt="C2S_Upsample Module" src="https://github.com/user-attachments/assets/89a04971-6e58-43c8-a4fc-8b8f2864f3c4" />
   <br>
-  <em>Figure 4. CSP_DCNv2CoordConv module — combining deformable convolution and coordinate convolution for enhanced spatial awareness.</em>
-</div>
-
-<div align="center">
-  <img width="550" alt="C2S_Upsample Module" src="https://github.com/user-attachments/assets/89a04971-6e58-43c8-a4fc-8b8f2864f3c4" />
-  <br>
-  <em>Figure 5. C2S_Upsample module — channel-to-spatial reconstruction and multi-scale feature fusion.</em>
+  <em>Figure 4. C2S_Upsample module — channel-to-spatial reconstruction and multi-scale feature fusion.</em>
 </div>
 
 ---
@@ -98,7 +81,7 @@ The dataset used in this study includes **12,000 labeled images** of eight major
 <div align="center">
   <img width="480" alt="Floating Object Dataset Samples" src="https://github.com/user-attachments/assets/c31fe7a4-17e0-43d8-8c33-bde4dc278302" />
   <br>
-  <em>Figure 6. Sample images from the floating object dataset covering eight debris categories.</em>
+  <em>Figure 5. Sample images from the floating object dataset covering eight debris categories.</em>
 </div>
 
 ---
