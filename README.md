@@ -26,9 +26,9 @@ By reorganizing multi-level features and preserving high-frequency information, 
 ---
 
 <div align="center">
-  <img width="850" alt="FD-YOLOv8 Overview" src="https://github.com/user-attachments/assets/e2901410-a7d0-4216-b40e-f90123bbaa71" />
+  <img width="1000" alt="FD-YOLOv8 Framework" src="https://github.com/user-attachments/assets/5e05bb55-cf37-4e4e-87b3-4f51703a517f" />
   <br>
-  <em>Figure 1. Overview of FD-YOLOv8 framework and its three core structural improvements.</em>
+  <em>Figure 1. Overall framework of FD-YOLOv8 showing backbone, neck, and enhanced modules.</em>
 </div>
 
 ---
@@ -77,12 +77,6 @@ The dataset used in this study includes **12,000 labeled images** of eight major
 - Self-collected images from **Nantong canal gates**  
 - Synthetic samples generated using **Stable Diffusion 3**  
 - Split ratio: **Train 70% / Val 20% / Test 10%**
-
-<div align="center">
-  <img width="480" alt="Floating Object Dataset Samples" src="https://github.com/user-attachments/assets/c31fe7a4-17e0-43d8-8c33-bde4dc278302" />
-  <br>
-  <em>Figure 5. Sample images from the floating object dataset covering eight debris categories.</em>
-</div>
 
 ---
 
