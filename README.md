@@ -38,21 +38,21 @@ By reorganizing multi-level features and preserving high-frequency information, 
 The main components of **FD-YOLOv8** are illustrated below.
 
 <div align="center">
-  <img width="520" alt="SPDConv Module" src="https://github.com/user-attachments/assets/eb763163-9618-4ec0-9206-19658da9862c" />
+  <img width="1000" alt="SPDConv Module" src="https://github.com/user-attachments/assets/485d8ed1-15a2-4c96-a805-6923fefb1fe7" />
   <br>
-  <em>Figure 2. SPDConv module — multi-branch sparse convolution and dynamic fusion.</em>
+  <em>Figure 2. SPDConv module — multi-branch sparse convolution and dynamic fusion for fine-grained feature extraction.</em>
 </div>
 
 <div align="center">
-  <img width="540" alt="CSP_DCNv2CoordConv Module" src="https://github.com/user-attachments/assets/50c4aa0e-2908-4877-ab86-5ef356d2aa11" />
+  <img width="1000" alt="CSP_DCNv2CoordConv Module" src="https://github.com/user-attachments/assets/ad04931c-a8c8-4ecd-a8a4-27d0b76f9f3d" />
   <br>
-  <em>Figure 3. CSP_DCNv2CoordConv module — combining deformable convolution and coordinate convolution for enhanced spatial awareness.</em>
+  <em>Figure 3. CSP_DCNv2CoordConv module — integrating deformable and coordinate convolution to enhance spatial perception under complex illumination.</em>
 </div>
 
 <div align="center">
-  <img width="580" alt="C2S_Upsample Module" src="https://github.com/user-attachments/assets/89a04971-6e58-43c8-a4fc-8b8f2864f3c4" />
+  <img width="1000" alt="C2S_Upsample Module" src="https://github.com/user-attachments/assets/1410000f-488d-4086-a0f7-a6ced61e81b7" />
   <br>
-  <em>Figure 4. C2S_Upsample module — channel-to-spatial reconstruction and multi-scale feature fusion.</em>
+  <em>Figure 4. C2S_Upsample module — channel-to-spatial reconstruction and multi-scale fusion for high-resolution feature recovery.</em>
 </div>
 
 ---
